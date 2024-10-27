@@ -1,0 +1,51 @@
+﻿@model EmployeeManagmentSystem.Domain.Job
+
+<div class="modal" id="modalAddJob" tabindex="-1" style="backdrop-filter:blur(5px)" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header text-bg-dark">
+                <h5 class="modal-title small">Add Job Details</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="formId" asp-action="AddJob">
+                <div id="modalbody" class="modal-body">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group">
+                        <input asp-for="JobTitle" placeholder="Job Name" class="form-control" />
+                        <span asp-validation-for="JobTitle" class="text-danger"></span>
+                    </div>
+                    <div class="row gx-3 mt-3">
+                        <div class="col-10 d-flex"><button type="submit" class="btn btn-success btn-sm text-center flex-fill">Add Job</button></div>
+                        <div class="col-2 d-flex"><button type="button" class="btn btn-warning btn-sm flex-fill " data-bs-dismiss="modal">Close</button></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#formId').submit(function (e) {
+            e.preventDefault();   
+            var form = $(this);
+            var actionUrl = form.attr('action');
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("AddJob", "Job")',
+                data: form.serialize(),  
+                success: function (response) {
+                    if (response.isValid) {
+                        window.location.href = response.redirectUrl;
+                    }     
+                    $('#modalAddJob').modal('show');
+                    $('.modalbody').html(response);
+                },
+                error: function () {
+                    alert("Error processing your request.");  
+                }
+            });
+        });
+    });
+
+</script>

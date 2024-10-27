@@ -1,0 +1,115 @@
+﻿@model EmployeeManagmentSystem.Domain.Job
+
+<div class="modal " id="modalSearch" tabindex="-1" style="backdrop-filter:blur(5px)" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content w-auto" id="modal-content">
+            <div class="modal-header text-bg-dark">
+                <h5 class="modal-title small"> Searching Result </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class=" small  ">
+                    <table class="table caption-top table-bordered align-middle shadow small">
+                        <thead>
+                            <tr class="table-success">
+                                <th>
+                                    @Html.DisplayNameFor(model => model.JobId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.JobTitle)
+                                </th>
+                                <th>
+                                    @Html.DisplayName("Details")
+                                </th>
+                                <th>
+                                    @Html.DisplayName("Edite")
+                                </th>
+                                <th>
+                                    @Html.DisplayName("Delete")
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.JobId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.JobTitle)
+                                </td>
+                                <td>
+                                    <a class="btn btn-primary w-100 btnDetails" data-id="@Model.JobId">Details</a>
+                                </td>
+                                <td>
+                                    <a class="btn btn-warning w-100 edit" data-id="@Model.JobId">Edit</a>
+                                </td>
+                                <td>
+                                    <a class="btn btn-danger w-100 btnDelete" data-id="@Model.JobId">Delete</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    //details
+    $(document).ready(function () {
+        $('a.btnDetails').click(function (e) {
+            e.preventDefault();
+            var detailsId = $(this).data("id");
+            $.ajax({
+                url: '@Url.Action("Details", "Job")' + '/' + detailsId,
+                type: 'GET',
+                success: function (data) {
+                    $('#jobcontainer').html(data);
+                    $('#jobDetails').modal('show');                   
+                },
+                error: function () {
+                    alert("Error loading the form.");                    
+                }
+            });
+        });
+    });
+
+    //edit
+    $(document).ready(function () {
+        $('a.edit').click(function (e) {
+            e.preventDefault();
+            var editId = $(this).data("id");
+            $.ajax({
+                url: '@Url.Action("Edit", "Job")' + '/' + editId,
+                type: 'GET',
+                success: function (data) {
+                    $('#jobcontainer').html(data);
+                    $('#editJob').modal('show');
+                },
+                error: function () {
+                    alert("You are not authorized");
+                }
+            });
+        });
+    });
+    //delete
+    $(document).ready(function () {
+        $('a.btnDelete').click(function (e) {
+            e.preventDefault();
+            var deleteId = $(this).data("id");
+            $.ajax({
+                url: '@Url.Action("Delete", "Job")' + '/' + deleteId,
+                type: 'GET',
+                success: function (data) {
+                    $('#jobcontainer').html(data);
+                    $('#deleteJob').modal('show');
+                },
+                error: function () {
+                    alert("You are not authorized");
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,17 @@
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Repositories\bin\Debug\net8.0\EmployeeManagmentSystem.Repositories.deps.json
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Repositories\bin\Debug\net8.0\EmployeeManagmentSystem.Repositories.dll
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Repositories\bin\Debug\net8.0\EmployeeManagmentSystem.Repositories.pdb
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Repositories\bin\Debug\net8.0\EmployeeManagmentSystem.Data.dll
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Repositories\bin\Debug\net8.0\EmployeeManagmentSystem.Domain.dll
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Repositories\bin\Debug\net8.0\EmployeeManagmentSystem.Data.pdb
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Repositories\bin\Debug\net8.0\EmployeeManagmentSystem.Domain.pdb
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Repositories\obj\Debug\net8.0\EmployeeManagmentSystem.Repositories.csproj.AssemblyReference.cache
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Repositories\obj\Debug\net8.0\EmployeeManagmentSystem.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Repositories\obj\Debug\net8.0\EmployeeManagmentSystem.Repositories.AssemblyInfoInputs.cache
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Repositories\obj\Debug\net8.0\EmployeeManagmentSystem.Repositories.AssemblyInfo.cs
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Repositories\obj\Debug\net8.0\EmployeeManagmentSystem.Repositories.csproj.CoreCompileInputs.cache
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Repositories\obj\Debug\net8.0\Employee.F691E25C.Up2Date
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Repositories\obj\Debug\net8.0\EmployeeManagmentSystem.Repositories.dll
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Repositories\obj\Debug\net8.0\refint\EmployeeManagmentSystem.Repositories.dll
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Repositories\obj\Debug\net8.0\EmployeeManagmentSystem.Repositories.pdb
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Repositories\obj\Debug\net8.0\ref\EmployeeManagmentSystem.Repositories.dll

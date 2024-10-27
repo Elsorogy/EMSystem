@@ -1,0 +1,20 @@
+﻿@model EmployeeManagmentSystem.Domain.Job
+
+<div class="modal" id="deleteJob" tabindex="-1" style="backdrop-filter:blur(5px)" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <label class="modal-title fw-light fs-4">Do you want to delete the job <b>"@Model.JobTitle "</b>?</label>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <form id="formid" asp-action="SaveDelete" asp-route-id="@Model.JobId"> 
+                    <button type="submit" class="btn btn-danger btn-sm" data-bs-dismiss="modal">Yes!</button>
+                </form>
+                <button type="button" class="btn btn-warning btn-sm " data-bs-dismiss="modal">Nope, Go back</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

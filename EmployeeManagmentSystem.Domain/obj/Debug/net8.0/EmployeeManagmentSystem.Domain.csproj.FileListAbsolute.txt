@@ -1,0 +1,14 @@
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Domain\bin\Debug\net8.0\EmployeeManagmentSystem.Domain.deps.json
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Domain\bin\Debug\net8.0\EmployeeManagmentSystem.Domain.runtimeconfig.json
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Domain\bin\Debug\net8.0\EmployeeManagmentSystem.Domain.dll
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Domain\bin\Debug\net8.0\EmployeeManagmentSystem.Domain.pdb
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Domain\obj\Debug\net8.0\EmployeeManagmentSystem.Domain.csproj.AssemblyReference.cache
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Domain\obj\Debug\net8.0\EmployeeManagmentSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Domain\obj\Debug\net8.0\EmployeeManagmentSystem.Domain.AssemblyInfoInputs.cache
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Domain\obj\Debug\net8.0\EmployeeManagmentSystem.Domain.AssemblyInfo.cs
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Domain\obj\Debug\net8.0\EmployeeManagmentSystem.Domain.csproj.CoreCompileInputs.cache
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Domain\obj\Debug\net8.0\EmployeeManagmentSystem.Domain.dll
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Domain\obj\Debug\net8.0\refint\EmployeeManagmentSystem.Domain.dll
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Domain\obj\Debug\net8.0\EmployeeManagmentSystem.Domain.pdb
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Domain\obj\Debug\net8.0\EmployeeManagmentSystem.Domain.genruntimeconfig.cache
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Domain\obj\Debug\net8.0\ref\EmployeeManagmentSystem.Domain.dll

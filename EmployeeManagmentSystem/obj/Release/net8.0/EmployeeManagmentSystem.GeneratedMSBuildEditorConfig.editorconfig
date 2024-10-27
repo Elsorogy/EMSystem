@@ -1,0 +1,115 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = EmployeeManagmentSystem
+build_property.RootNamespace = EmployeeManagmentSystem
+build_property.ProjectDir = D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Account/LogIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dJbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Admin/RegisterAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVnaXN0ZXJBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Employee/DashBoard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGFzaEJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Employee/DisplayAllEmps.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGlzcGxheUFsbEVtcHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Employee/_AddEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcX0FkZEVtcGxveWVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Employee/_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcX0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Employee/_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcX0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Employee/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcX0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Employee/_SearchByName.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcX1NlYXJjaEJ5TmFtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Job/DisplayAllJobs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXERpc3BsYXlBbGxKb2JzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Job/_AddJob.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXF9BZGRKb2IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Job/_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXF9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Job/_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXF9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Job/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXF9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Job/_SearchByName.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXF9TZWFyY2hCeU5hbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Role/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Amin/mvc2024/EmployeeManagmentSystem/EmployeeManagmentSystem/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-igukqqs6si

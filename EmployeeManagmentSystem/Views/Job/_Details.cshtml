@@ -1,0 +1,48 @@
+﻿@model EmployeeManagmentSystem.Domain.Job
+
+<div class="modal" id="jobDetails" tabindex="-1" style="backdrop-filter:blur(5px)" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header text-bg-dark">
+                <h5 class="modal-title small">Job Details</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body m-0 p-0">
+                <table class="table table-bordered mb-0">
+                    <tr>
+                        <th class="w-50">ID</th>
+                        <td>@Model.JobId</td>
+                    </tr>
+                    <tr>
+                        <th>Job Name</th>
+                        <td>@Model.JobTitle</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-warning btn-sm  editDetails" data-bs-toggle="modal" data-id="@Model.JobId">Edite Details</a>
+                <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.editDetails').click(function (e) {
+            e.preventDefault();
+            var editId = $(this).data("id");
+            $.ajax({
+                url: '@Url.Action("Edit", "Job")' + '/' + editId,
+                type: 'GET',
+                success: function (data) {
+                    $('#jobcontainer').html(data);
+                    $('#editJob').modal('show');
+                },
+                error: function () {
+                    alert("You are not authorized");
+                }
+            });
+        });
+    });
+</script>

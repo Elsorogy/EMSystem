@@ -1,0 +1,185 @@
+﻿@model IEnumerable<EmployeeManagmentSystem.Domain.Employee>
+
+<div id="div1"></div>
+<div class="container-fluid mt-3  ">
+    <div class="row justify-content-center gap-3 ">
+        <div class="col-2 small">
+            <div>
+                <ul class="list-group">
+                    <li class="list-group-item text-bg-primary">Employee data</li>
+                    <li class="list-group-item">
+                        <a class="text-decoration-none text-black btn" id="btnAddEmployee">Add Employee</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-4">
+                <ul class="list-group">
+                    <li class="list-group-item text-bg-primary">Related Links</li>
+                    <li class="list-group-item">
+                        <a asp-action="DisplayAllJobs" asp-controller="Job" class="text-decoration-none text-black btn">Jobs List</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="div2" class="col-8 small addtable">
+            <table class="table caption-top table-bordered align-middle shadow small employeeList">
+                <caption class="text-center text-bg-dark rounded-top-2">Employees List</caption>
+                <thead>
+                    <tr class="table-success">
+                        <th>
+                            @Html.DisplayNameFor(model => model.EmployeeId)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FirstName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LastName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </th>
+                        <th>
+                            @Html.DisplayName("Details")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Edite")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Delete")
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EmployeeId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FirstName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LastName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                <a class="btn btn-primary w-100 btnDetails" data-id="@item.EmployeeId">Details</a>
+                            </td>
+                            <td>
+                                <a class="btn btn-warning w-100 edit" data-id="@item.EmployeeId">Edit</a>
+                            </td>
+                            <td>
+                                <a class="btn btn-danger w-100 btnDelete" data-employee-id="@item.EmployeeId">Delete</a>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    //ADD
+    $(document).ready(function () {  
+        $('#btnAddEmployee').click(function () {
+            $.ajax({
+                url: '@Url.Action("AddEmployee", "Employee")',  
+                type: 'GET',
+                success: function (data) {
+                    $('#div1').html(data);  
+                    $('#modalAddEmployee').modal('show');
+                },
+                error: function () {
+                    alert("You are not authorized");
+                }
+            });
+        });
+    });
+
+    //Details
+    $(document).ready(function () {
+        $('a.btnDetails').click(function (e) {
+            e.preventDefault();
+            var detailsId = $(this).data("id");
+            $.ajax({
+                url: '@Url.Action("Details", "Employee")' + '/' + detailsId,
+                type: 'GET',
+                success: function (data) {
+                    $('#div1').html(data);
+                    $('#details').modal('show');
+                },
+                error: function () {
+                    alert("Error loading the form.");
+                }
+            });
+        });
+    });
+
+
+    //Edit
+    $(document).ready(function () {
+        $('a.edit').click(function (e) {
+            e.preventDefault(); 
+            var employeeId = $(this).data("id");
+            $.ajax({
+                url: '@Url.Action("Edit", "Employee")' + '/' + employeeId,
+                type: 'GET',
+                success: function (data) {
+                    $('#div1').html(data);  
+                    $('#edit').modal('show'); 
+                },
+                error: function () {
+                    alert("You are not authorized");
+                }
+            });
+        });
+    });
+
+    //Delete
+    $(document).ready(function () {  
+        $('a.btnDelete').click(function (e) {
+            e.preventDefault(); 
+            var employeeId = $(this).data("employee-id"); 
+            console.log("Employee ID: " + employeeId);
+            $.ajax({
+                url: '@Url.Action("Delete", "Employee")' + '/' + employeeId, 
+                type: 'GET',
+                success: function (data) {
+                    $('#div1').html(data); 
+                    $('#delete').modal('show'); 
+                },
+                error: function () {
+                    alert("You are not authorized");
+                }
+            });
+        });
+    });
+
+    //search
+    $(document).ready(function () {
+        $('#formid').submit(function (e) {
+            e.preventDefault();
+            var form = $(this);
+            var actionUrl = form.attr('action');
+            $.ajax({
+                type: "POST",
+                url: actionUrl,
+                data: form.serialize(),
+                success: function (response) {
+                    $('#div1').html(response);
+                    $('#modalSearch').modal('show');
+                },
+                error: function () {
+                    alert("Error processing your request.");
+                }
+            });
+        });
+    });   
+</script>
+

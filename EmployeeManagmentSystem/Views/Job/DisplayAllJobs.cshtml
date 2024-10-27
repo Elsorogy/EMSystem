@@ -1,0 +1,169 @@
+﻿@model IEnumerable<EmployeeManagmentSystem.Domain.Job>
+
+<div id="jobcontainer"></div>
+<div class="container-fluid mt-3 ">
+    <div class="row justify-content-center gap-3 ">
+        <div class="col-2">
+            <div>
+                <ul class="list-group">
+                    <li class="list-group-item text-bg-primary">Jobs data</li>
+                    <li class="list-group-item">
+                        <a class="text-decoration-none text-black btn  btnAddJob">Add Job</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-4">
+                <ul class="list-group">
+                    <li class="list-group-item text-bg-primary">Related Links</li>
+                    <li class="list-group-item">
+                        <a asp-action="DisplayAllEmps" asp-controller="Employee" class="text-decoration-none text-black btn">Employees List</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-8 small ">
+            <table class="table caption-top table-bordered align-middle shadow small ">
+                <caption class="text-center text-bg-dark rounded-top-2">Jobs List</caption>
+                <thead>
+                    <tr class="table-success">
+                        <th>
+                            @Html.DisplayNameFor(model => model.JobId)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.JobTitle)
+                        </th>
+                        <th>
+                            @Html.DisplayName("Details")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Edite")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Delete")
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.JobId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.JobTitle)
+                            </td>
+                            <td>
+                                <a class="btn btn-primary w-100 btnDetails" data-id="@item.JobId">Details</a>
+                            </td>
+                            <td>
+                                <a class="btn btn-warning w-100 btnedit" data-id="@item.JobId">Edit
+                                </a>
+                            </td>
+                            <td>
+                                <a class="btn btn-danger w-100 btnDelete" data-id="@item.JobId">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    //Add Modal
+    $(document).ready(function () {
+        $('a.btnAddJob').click(function () {
+            $.ajax({
+                url: '@Url.Action("AddJob", "Job")',
+                type: 'GET',
+                success: function (data) {
+                    $('#jobcontainer').html(data);
+                    $('#modalAddJob').modal('show');
+                },
+                error: function () {
+                    alert("You are not authorized");
+                }
+            });
+        });
+    });
+
+    //Details Modal
+    $(document).ready(function () {
+        $('a.btnDetails').click(function (e) {
+            e.preventDefault();
+            var detailsId = $(this).data("id");
+            $.ajax({
+                url: '@Url.Action("Details", "Job")' + '/' + detailsId,
+                type: 'GET',
+                success: function (data) {
+                    $('#jobcontainer').html(data);
+                    $('#jobDetails').modal('show');
+                },
+                error: function () {
+                    alert("Error loading the form.");
+                }
+            });
+        });
+    });
+
+    //Edit Modal
+    $(document).ready(function () {
+        $('a.btnedit').click(function (e) {
+            e.preventDefault();
+            var editId = $(this).data("id");
+            $.ajax({
+                url: '@Url.Action("Edit", "Job")' + '/' + editId,
+                type: 'GET',
+                success: function (data) {
+                    $('#jobcontainer').html(data);
+                    $('#editJob').modal('show');
+                },
+                error: function () {
+                    alert("You are not authorized");
+                }
+            });
+        });
+    });
+
+    //Delete Modal
+    $(document).ready(function () {
+        $('a.btnDelete').click(function (e) {
+            e.preventDefault();
+            var deleteId = $(this).data("id");
+            $.ajax({
+                url: '@Url.Action("Delete", "Job")' + '/' + deleteId,
+                type: 'GET',
+                success: function (data) {
+                    $('#jobcontainer').html(data);
+                    $('#deleteJob').modal('show');
+                },
+                error: function () {
+                    alert("You are not authorized");
+                }
+            });
+        });
+    });
+
+    //search
+    $(document).ready(function () {
+        $('#formid').submit(function (e) {
+            e.preventDefault();
+            var form = $(this);
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("SearchByName", "Job")',
+                data: form.serialize(),
+                success: function (response) {
+                    $('#jobcontainer').html(response);
+                    $('#modalSearch').modal('show');
+                },
+                error: function () {
+                    alert("Error processing your request.");
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,93 @@
+﻿@model EmployeeManagmentSystem.Domain.Employee
+
+<div class="modal" id="edit" tabindex="-1" style="backdrop-filter:blur(5px)" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header text-bg-dark">
+        <h5 class="modal-title small">Add Employee Details</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form id="formid" asp-action="Edit" asp-route-id="@Model.EmployeeId">
+        <div id="ModalBody" class="modal-body">
+            <div asp-validation-summary="All"></div>
+          <div class="row mb-3">
+            <div class="form-group">
+              <input asp-for="JoiningDate" class="form-control" />
+              <span asp-validation-for="JoiningDate" class="text-danger"></span>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-6">
+              <div class="form-group">
+                <input asp-for="FirstName" placeholder="First Name" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <input asp-for="LastName" placeholder="Last Name" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-6">
+              <div class="form-group">
+                <input asp-for="Email" placeholder="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <input asp-for="PhoneNumber" placeholder="Phone Number" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="form-group">
+              <select asp-for="JobId" asp-items="@ViewBag.jobListForSelected" class="form-control">
+                <option value="0">Select Job For Employee</option>
+              </select>
+              <span asp-validation-for="JobId" class="text-danger"></span>
+            </div>
+          </div>
+          <div class="row gx-3">
+            <div class="col-10 d-flex"><button type="submit" class="btn btn-success btn-sm text-center flex-fill">Update
+                Employee</button></div>
+            <div class="col-2 d-flex"><button type="button" class="btn btn-warning btn-sm flex-fill "
+                data-bs-dismiss="modal">Discard</button></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $('#formid').submit(function (e) {
+            e.preventDefault();  
+            var form = $(this);
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("Edit", "Employee")',
+                data: form.serialize(),  
+                success: function (response) {
+                    if (response.isValid) {
+                        $('#div1').html(response);
+                        $('#edit').modal('hide');
+                    } else
+                    {
+                        $("#modalAddEmployee").modal("show");
+                        $(".ModalBody").html(response);
+                    }                            
+                },
+                error: function () {
+                    alert("Error processing your request.");
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,71 @@
+﻿@model EmployeeManagmentSystem.Domain.Employee
+
+<div class="modal"  id="details" tabindex="-1" style="backdrop-filter:blur(5px)" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header text-bg-dark">
+        <h5 class="modal-title small">Employee Details</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body m-0 p-0">
+        <table class="table table-bordered mb-0">
+          <tr>
+            <th class="w-50">ID</th>
+            <td>@Model.EmployeeId</td>
+          </tr>
+         
+          <tr>
+            <th>First Name</th>
+            <td>@Model.FirstName</td>
+          </tr>
+          <tr>
+            <th>Last Name</th>
+            <td>@Model.LastName</td>
+          </tr>
+          <tr>
+            <th>Email ID</th>
+            <td>@Model.Email</td>
+          </tr>
+          <tr>
+            <th>Phone Number</th>
+            <td>@Model.PhoneNumber</td>
+          </tr>
+          <tr>
+            <th>Job</th>
+            <td>@Model.Job.JobTitle</td>
+          </tr>
+          <tr>
+            <th>Joining Date</th>
+            <td>@Model.JoiningDate</td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal-footer">
+      <a class="btn btn-warning btn-sm detailToEdit" data-id="@Model.EmployeeId" data-bs-toggle="modal">Edite Details</a>
+        <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $('.detailToEdit').click(function (e) {
+            e.preventDefault();
+            var editId = $(this).data("id");
+            $.ajax({
+                url: '@Url.Action("Edit", "Employee")' + '/' + editId,
+                type: 'GET',
+                success: function (data) {
+                    $('#div1').html(data);
+                    $('#edit').modal('show');
+                },
+                error: function () {
+                    alert("You are not authorized");
+                }
+            });
+            console.log('@Url.Action("Edit", "Employee")' + '/' + editId);
+        });
+    });
+</script>

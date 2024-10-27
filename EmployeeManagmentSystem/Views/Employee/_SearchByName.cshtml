@@ -1,0 +1,129 @@
+﻿@model EmployeeManagmentSystem.Domain.Employee
+
+<div class="modal " id="modalSearch" tabindex="-1" style="backdrop-filter:blur(5px)" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content w-auto" id="modal-content">
+            <div class="modal-header text-bg-dark">
+                <h5 class="modal-title small"> Searching Result </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class=" small  ">
+                    <table class="table caption-top table-bordered align-middle shadow small">
+                       
+                        <thead>
+                            <tr class="table-success">
+                                <th>
+                                    @Html.DisplayNameFor(model => model.EmployeeId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.FirstName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.LastName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Email)
+                                </th>
+                                <th>
+                                    @Html.DisplayName("Details")
+                                </th>
+                                <th>
+                                    @Html.DisplayName("Edite")
+                                </th>
+                                <th>
+                                    @Html.DisplayName("Delete")
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.EmployeeId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.FirstName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.LastName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.Email)
+                                </td>
+                                <td>
+                                    <a class="btn btn-primary w-100 btnDetails" data-id="@Model.EmployeeId">Details</a>
+                                </td>
+                                <td>
+                                    <a class="btn btn-warning w-100 edit" data-id="@Model.EmployeeId">Edit</a>
+                                </td>
+                                <td>
+                                    <a class="btn btn-danger w-100 btnDelete" data-id="@Model.EmployeeId">Delete</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    //details
+    $(document).ready(function () {
+        $('a.btnDetails').click(function (e) {
+            e.preventDefault();
+            var detailsId = $(this).data("id");
+            $.ajax({
+                url: '@Url.Action("Details", "Employee")' + '/' + detailsId,
+                type: 'GET',
+                success: function (data) {
+                    $('#div1').html(data);
+                    $('#details').modal('show');                   
+                },
+                error: function () {
+                    alert("Error loading the form.");
+                }
+            });
+            console.log('@Url.Action("Details", "Employee")' + '/' + detailsId);
+        });
+    });
+
+    //edit
+    $(document).ready(function () {
+        $('a.edit').click(function (e) {
+            e.preventDefault();
+            var editId = $(this).data("id");
+            $.ajax({
+                url: '@Url.Action("Edit", "Employee")' + '/' + editId,
+                type: 'GET',
+                success: function (data) {
+                    $('#div1').html(data);
+                    $('#edit').modal('show');
+                },
+                error: function () {
+                    alert("You are not authorized");
+                }
+            });
+        });
+    });
+
+    //delete
+    $(document).ready(function () {
+        $('a.btnDelete').click(function (e) {
+            e.preventDefault();
+            var deleteId = $(this).data("id");
+            $.ajax({
+                url: '@Url.Action("Delete", "Employee")' + '/' + deleteId,
+                type: 'GET',
+                success: function (data) {
+                    $('#div1').html(data);
+                    $('#delete').modal('show');
+                },
+                error: function () {
+                    alert("You are not authorized");
+                }
+            });
+        });
+    });
+</script>

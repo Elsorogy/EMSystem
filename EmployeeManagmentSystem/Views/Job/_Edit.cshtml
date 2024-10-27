@@ -1,0 +1,54 @@
+﻿@model EmployeeManagmentSystem.Domain.Job
+
+<div class="modal" id="editJob" tabindex="-1" style="backdrop-filter:blur(5px)" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header text-bg-dark">
+                <h5 class="modal-title small">Add Job Details</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="formid"  asp-action="Edit" asp-route-id="@Model.JobId">
+                <div class="modal-body">
+                    <div asp-validation-summary="All" class="text-danger"></div>                   
+                    <div class="form-group">
+                        <label asp-for="JobTitle" class="control-label"></label>
+                        <input asp-for="JobTitle" class="form-control" />
+                        <span asp-validation-for="JobTitle" class="text-danger"></span>
+                    </div>
+                    <div class="row gx-3 mt-3">
+                        <div class="col-10 d-flex"><button type="submit" class="btn btn-success text-center flex-fill btn-sm">Update Job</button></div>
+                        <div class="col-2"><button type="button" class="btn btn-warning btn-sm" data-bs-dismiss="modal">Discard</button></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {        
+        $('#formid').submit(function (e) {
+            e.preventDefault();  
+            var form = $(this);
+            var actionUrl = form.attr('action');
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("Edit", "Job")',
+                data: form.serialize(),  
+                success: function (response) {
+                    if (response.isValid) 
+                    {
+                    $('#jobcontainer').html(response);
+                    $('#editJob').modal('hide');
+                    }
+                    $('#editJob').modal('show');
+                },
+                error: function () {
+                    alert("Error processing your request.");
+                }
+            });
+        });
+    });
+
+</script>

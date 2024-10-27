@@ -1,0 +1,17 @@
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Data\bin\Debug\net8.0\EmployeeManagmentSystem.Data.deps.json
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Data\bin\Debug\net8.0\EmployeeManagmentSystem.Data.runtimeconfig.json
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Data\bin\Debug\net8.0\EmployeeManagmentSystem.Data.dll
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Data\bin\Debug\net8.0\EmployeeManagmentSystem.Data.pdb
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Data\bin\Debug\net8.0\EmployeeManagmentSystem.Domain.dll
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Data\bin\Debug\net8.0\EmployeeManagmentSystem.Domain.pdb
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Data\obj\Debug\net8.0\EmployeeManagmentSystem.Data.csproj.AssemblyReference.cache
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Data\obj\Debug\net8.0\EmployeeManagmentSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Data\obj\Debug\net8.0\EmployeeManagmentSystem.Data.AssemblyInfoInputs.cache
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Data\obj\Debug\net8.0\EmployeeManagmentSystem.Data.AssemblyInfo.cs
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Data\obj\Debug\net8.0\EmployeeManagmentSystem.Data.csproj.CoreCompileInputs.cache
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Data\obj\Debug\net8.0\Employee.471E2EC4.Up2Date
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Data\obj\Debug\net8.0\EmployeeManagmentSystem.Data.dll
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Data\obj\Debug\net8.0\refint\EmployeeManagmentSystem.Data.dll
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Data\obj\Debug\net8.0\EmployeeManagmentSystem.Data.pdb
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Data\obj\Debug\net8.0\EmployeeManagmentSystem.Data.genruntimeconfig.cache
+D:\Amin\mvc2024\EmployeeManagmentSystem\EmployeeManagmentSystem.Data\obj\Debug\net8.0\ref\EmployeeManagmentSystem.Data.dll

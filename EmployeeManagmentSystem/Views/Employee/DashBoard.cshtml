@@ -1,0 +1,26 @@
+﻿<div class="container-fluid mt-3">
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <div class="card text-bg-primary text-center shadow">
+                <div class="card-header">Employees List</div>
+                <div class="card-body">
+                    <h1 class="card-title">@ViewBag.empNumber</h1>
+                </div>
+                <div class="card-footer">
+                    <a class="text-decoration-none d-block text-light" asp-action="DisplayAllEmps" asp-controller="Employee">View Employees</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card text-bg-primary text-center shadow">
+                <div class="card-header">Jobs List</div>
+                <div class="card-body">
+                    <h1 class="card-title">@ViewBag.jobNumber</h1>
+                </div>
+                <div class="card-footer">
+                    <a class="text-decoration-none d-block text-light" asp-action="DisplayAllJobs" asp-controller="Job">View all Jobs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

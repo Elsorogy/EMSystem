@@ -1,0 +1,15 @@
+D:\Amin\mvc2024\EmployeeManagmentSystem\ViewModels\bin\Release\net8.0\ViewModels.deps.json
+D:\Amin\mvc2024\EmployeeManagmentSystem\ViewModels\bin\Release\net8.0\ViewModels.dll
+D:\Amin\mvc2024\EmployeeManagmentSystem\ViewModels\bin\Release\net8.0\ViewModels.pdb
+D:\Amin\mvc2024\EmployeeManagmentSystem\ViewModels\bin\Release\net8.0\EmployeeManagmentSystem.Domain.dll
+D:\Amin\mvc2024\EmployeeManagmentSystem\ViewModels\bin\Release\net8.0\EmployeeManagmentSystem.Domain.pdb
+D:\Amin\mvc2024\EmployeeManagmentSystem\ViewModels\obj\Release\net8.0\ViewModels.csproj.AssemblyReference.cache
+D:\Amin\mvc2024\EmployeeManagmentSystem\ViewModels\obj\Release\net8.0\ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\Amin\mvc2024\EmployeeManagmentSystem\ViewModels\obj\Release\net8.0\ViewModels.AssemblyInfoInputs.cache
+D:\Amin\mvc2024\EmployeeManagmentSystem\ViewModels\obj\Release\net8.0\ViewModels.AssemblyInfo.cs
+D:\Amin\mvc2024\EmployeeManagmentSystem\ViewModels\obj\Release\net8.0\ViewModels.csproj.CoreCompileInputs.cache
+D:\Amin\mvc2024\EmployeeManagmentSystem\ViewModels\obj\Release\net8.0\ViewModels.csproj.Up2Date
+D:\Amin\mvc2024\EmployeeManagmentSystem\ViewModels\obj\Release\net8.0\ViewModels.dll
+D:\Amin\mvc2024\EmployeeManagmentSystem\ViewModels\obj\Release\net8.0\refint\ViewModels.dll
+D:\Amin\mvc2024\EmployeeManagmentSystem\ViewModels\obj\Release\net8.0\ViewModels.pdb
+D:\Amin\mvc2024\EmployeeManagmentSystem\ViewModels\obj\Release\net8.0\ref\ViewModels.dll
